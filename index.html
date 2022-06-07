@@ -11,7 +11,7 @@
 <body>
     <main>
         <!-- Start Button -->
-        <section class="start_btn">
+        <section class="start_box">
             <button>Start Quiz</button>
         </section>
         <!-- Info Box -->
@@ -39,40 +39,24 @@
                 <p class="title">Online Quiz Application</p>
                 <div class="timer">
                     <p class="time_text">Time Left</p>
-                    <p class="time_seconds">15</p>
+                    <p class="time_seconds">0</p>
+                    <div class="time_line"></div>
                 </div>
             </header>
             
             <section class="Q_A">
-                <!-- injection from js -->
-                <!-- injection from js -->
-                <!-- injection from js -->
                 <div class="question_text">
-                    <span>Question ?</span>
+                    <!-- <span>Question ?</span> -->
                 </div>
-                <div class="option_list">
-                    <div class="option">
-                        <span>answer1</span>
-                        <div class="icon tick"><i class="fas fa-check"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>answer2</span>
-                        <div class="icon cross"><i class="fas fa-times"></i></div>
-                    </div>
-                    <div class="option">
-                        <span>answer3</span>
-                    </div>
-                    <div class="option">
-                        <span>answer4</span>
-                    </div>
+                <div class="option_list">              
+                    <!-- <span>Question ?</span> -->
                 </div>
-
             </section>
             
             <footer>
                 <section class="total_questions">
                     <p>
-                        <span>4</span> of <span>5</span> Questions
+                        <span class="complete_num">1</span> of <span class="question_num"></span> Questions
                     </p>
                 </section>
                 <button class="next_btn">Next</button>
@@ -86,7 +70,7 @@
             
             <p class="complete_text">You've completed the Quiz!</p>
             
-            <p class="score_text">and sorry, You got only <span>2</span> out of <span>5</span></p>
+            <p class="score_text">and sorry, You got only <span class="result_num">2</span> out of <span class="question_num">5</span></p>
             
             <div class="buttons">
                 <button class="restart" type="button">Replay Quiz</button>
@@ -95,5 +79,8 @@
 
         </section>
     </main>
+
+    <script src="./js/questions.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
