@@ -21,11 +21,7 @@
             </div>
             
             <ul class="info_list">
-                <li class="info">1. You will have <span class="seconds">30 seconds</span> per each question.</li>
-                <li class="info">2. Once you select your answer, you can't reselect.</li>
-                <li class="info">3. You can't select any option once time goes off.</li>
-                <li class="info">4. You can't exit from the Quiz while you're playing.</li>
-                <li class="info">5. You'll get points on the basis of your correct answers.</li>
+                <!-- <span>Question ?</span> -->
             </ul>
 
             <div class="buttons">
@@ -39,7 +35,7 @@
                 <p class="title">Online Quiz Application</p>
                 <div class="timer">
                     <p class="time_text">Time Left</p>
-                    <p class="time_seconds">0</p>
+                    <p class="time_seconds"></p>
                     <div class="time_line"></div>
                 </div>
             </header>
@@ -66,11 +62,9 @@
         <section class="result_box">
             <div class="icon">
                 <i class="fas fa-crown"></i>
-            </div>
-            
+            </div>      
             <p class="complete_text">You've completed the Quiz!</p>
-            
-            <p class="score_text">and sorry, You got only <span class="result_num">2</span> out of <span class="question_num">5</span></p>
+            <p class="score_text">and you got only <span class="result_num"></span> out of <span class="question_num"></span></p>
             
             <div class="buttons">
                 <button class="restart" type="button">Replay Quiz</button>
@@ -80,6 +74,7 @@
         </section>
     </main>
 
+    <script src="./js/rules.js"></script>
     <script src="./js/questions.js"></script>
     <script src="./js/script.js"></script>
 </body>

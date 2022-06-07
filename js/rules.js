@@ -1,5 +1,4 @@
 const Rules = [
-    "1. You will have <span class='seconds'>30 seconds",
     "2. Once you select your answer, you can't reselect.",
     "3. You can't select any option once time goes off.",
     "4. You can't exit from the Quiz while you're playing.",
