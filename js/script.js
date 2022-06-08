@@ -129,7 +129,7 @@ function startTime(time) {
     counter = setInterval( timer, 1000 );
     
     function timer() {
-        timeCounter.textContent = time;
+        timeCounter.textContent = time-1;
         timeCounter.classList.remove('timeout');
         time--;
 
@@ -194,5 +194,3 @@ function showFinalResults() {
         window.close();
     })
 }
-
-// stop vid 00:45:17
