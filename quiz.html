@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="./css/quizStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main>
+        <!-- Start Button -->
+        <section class="start_box">
+            <button>Start Quiz</button>
+        </section>
+        <!-- Info Box -->
+        <section class="info_box">
+            <div class="info_title">
+                <p>Some Rules of this Quiz</p>
+            </div>
+            
+            <ul class="info_list">
+                <!-- <span>Question ?</span> -->
+            </ul>
+
+            <div class="buttons">
+                <button class="quit">Exit Quiz</button>
+                <button class="start">Continue</button>
+            </div>
+        </section>
+        <!-- Quiz box -->
+        <section class="quiz_box">
+            <header>
+                <p class="title">Online Quiz Application</p>
+                <div class="timer">
+                    <p class="time_text">Time Left</p>
+                    <p class="time_seconds">10</p>
+                    <div class="time_line"></div>
+                </div>
+            </header>
+            
+            <section class="Q_A">
+                <div class="question_text">
+                    <!-- <span>Question ?</span> -->
+                </div>
+                <div class="option_list">              
+                    <!-- <span>Question ?</span> -->
+                </div>
+            </section>
+            
+            <footer>
+                <section class="total_questions">
+                    <p>
+                        <span class="complete_num">1</span> of <span class="question_num"></span> Questions
+                    </p>
+                </section>
+                <button class="next_btn">Next</button>
+            </footer>
+        </section>
+        <!-- Result box -->
+        <section class="result_box">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>      
+            <p class="complete_text">You've completed the Quiz!</p>
+            <p class="score_text">and you got only <span class="result_num"></span> out of <span class="question_num"></span></p>
+            
+            <div class="buttons">
+                <button class="restart" type="button">Replay Quiz</button>
+                <button class="quit" type="button">Quit Quiz</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="./js/rules.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="./js/quizScript.js"></script>
+</body>
+</html>

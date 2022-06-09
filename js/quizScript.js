@@ -29,6 +29,20 @@ const quitButtonResultBox = document.querySelector('.result_box .buttons .quit')
 let correct_answers = 0;
 let incorrect_answers = 0;
 
+let tokens;
+
+// check localStorage
+if(localStorage.getItem('tokens')) {
+    tokens = localStorage.getItem('tokens');
+} else {
+    tokens = '';
+}
+
+// checkToken
+if(tokens === '') {
+    window.location.replace('./index.html');
+}
+
 // Show Info Box When Click on ####startButton####
 startButton.addEventListener('click',function(){
     start_box.classList.add('hide');
@@ -47,8 +61,7 @@ function showInfoBox() {
 
 // Close Info Box When Click on ####quitButtonInfoBox####
 quitButtonInfoBox.addEventListener('click',function(){
-    start_box.classList.remove('hide');
-    info_box.classList.remove('activeBox');
+    window.location.replace('./index.html');
 });
 
 // Show Quiz Box When Click on ####startButtonInfoBox####
@@ -67,6 +80,7 @@ nextQuestionButton.onclick = ()=> {
         nextQuestionButton.style.display = "none";
         clearInterval(counter);
         startTime(timeValue);
+        timeCounter.textContent = '10';
         clearInterval(counterLine);
         startTimeLine(widthValue);
         showQuestions(Questions_number);
@@ -96,6 +110,7 @@ function showQuestions(index) {
 function optionSelected(element) {
     clearInterval(counter);
     clearInterval(counterLine);
+    timeCounter.textContent = '10';
 
     let user_answer = element.innerText;
     let correct_answer = QuestionsBank[Questions_number - 1].Answer;
@@ -167,9 +182,9 @@ function startTimeLine(width) {
     let quiz_box_style = getComputedStyle(quiz_box);
 
     if(quiz_box_style.width == '350px'){
-        counterLine = setInterval( timer, 31.42 );
+        counterLine = setInterval( timer, 28.5714 );
     } else if (quiz_box_style.width == '550px') {
-        counterLine = setInterval( timer, 20 );
+        counterLine = setInterval( timer, 18.1818 );
     }
     
     function timer() {
@@ -191,6 +206,6 @@ function showFinalResults() {
         window.location.reload();
     })
     quitButtonResultBox.addEventListener('click', function(){
-        window.close();
+        window.location.replace('./index.html');
     })
 }
