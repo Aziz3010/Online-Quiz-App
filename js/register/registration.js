@@ -39,7 +39,7 @@ registrationForm.addEventListener('submit', function(e){
     if(errors.length == 0) {
         user = { ...user, token: randomToken() }
         userData.push(user);
-        localStorage.setItem('tokens',JSON.stringify(user.token));
+        localStorage.setItem('tokens',user.token);
         localStorage.setItem('userData', JSON.stringify(userData));
         messageBox.innerHTML = `<p class="alert alert-primary p-0 px-1 text-center text-capitalize">successful register</p>`;
         setTimeout(()=>{window.location.replace('./index.html')},2000)
